@@ -4,16 +4,15 @@ PASSWORD_RESET_EXPIRES = 4
 
 class User < ActiveRecord::Base
 
-  attr_accessor :password, :password_confirmation
-
   has_many  :products
   has_many  :reviews
 
+  attr_accessor :password, :password_confirmation
 
   before_save :set_random_password, :encrypt_password
   validates :email, presence: true, uniqueness: {case_sensitive: false}
-  validates :first_name, presence: true
-  validates :last_name, presence: true
+  # validates :first_name, presence: true
+  # validates :last_name, presence: true
   validates :password, confirmation: true
 
   def self.authenticate(email, password)

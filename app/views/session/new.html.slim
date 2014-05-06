@@ -9,29 +9,14 @@ main.container role="main"
           / .form-group = flash.map {| key, value| "#{key.capitalize}: #{value}"}.join(";")
 
           .form-group
-            / div class="form-group"
-            / label for="user_email" class="input-group input-group-lg" Email
             = f.label :email, class: "input-group input-group-lg"
-            / input type="text" id="user_email" name="user[email]" placeholder="Email Address"
             = f.text_field :email, class: "form-control" ,placeholder: "Email Address"
 
 
           .form-group
-            / div class="form-group"
-            / label for="user_password" class="input-group input-group-lg" Password
             = f.label :user_password, class: "input-group input-group-lg"
-            / input type="password" id="user_password" name="user[password]" placeholder="Password"
             = f.password_field :password, class: "form-control", placeholder: "Password"
 
 
           .form-group
-            / div class="form-group"
-            / input type="submit" value="Sign In" class="btn btn-success"
             = f.submit "Sign In", class: "btn btn-success"
-            / input type="submit" value="Register" class="btn btn-info"
-            / = f.submit "Register", class: "btn btn-info"
-
-  / ol
-  / - @users.each do |some_user|
-  /   li
-  /     = some_user.email

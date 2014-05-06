@@ -13,6 +13,16 @@ main.container role="main"
             = f.text_field :email, class: "form-control" ,placeholder: "Email Address"
 
           .form-group
+            = f.label :first_name, class: "input-group input-group-lg"
+            = f.text_field :first_name, class: "form-control" ,placeholder: "First name"
+
+
+          .form-group
+            = f.label :last_name, class: "input-group input-group-lg"
+            = f.text_field :last_name, class: "form-control" ,placeholder: "Last name"
+
+
+          .form-group
             = f.label :password, class: "input-group input-group-lg"
             = f.password_field :password, class: "form-control", placeholder: "Password"
 
