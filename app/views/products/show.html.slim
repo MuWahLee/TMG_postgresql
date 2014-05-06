@@ -5,17 +5,25 @@
     thead
       tr
         th.th_1 Product name
-        th.th_2 Product Weight (in grams)
-        th.th_3 Product Calories (in calories)
-        th.th_4 Action
-        th.th_4
+        th.th_2 Brand
+        th.th_3 Category
+        th.th_4 Sub category
+        th.th_5 Product Weight (in grams)
+        th.th_6 Product Calories (in calories)
+        th.th_7 image
+        th.th_8 Action
+        th.th_8
 
     tbody
       / - for item in @products
       tr
         td.td_1 => @product.product_name
-        td.td_2 => @product.product_weight
-        td.td_3 => @product.product_calories
-        td.td_4 = link_to "edit", edit_product_url(@product)
-        td.td_4 = link_to "delete", product_url(@product), method: :delete,
+        td.td_2 => @product.brand
+        td.td_3 => @product.category
+        td.td_4 => @product.sub_category
+        td.td_5 => @product.product_weight
+        td.td_6 => @product.product_calories
+        td.td_7
+        td.td_8 = link_to "edit", edit_product_url(@product)
+        td.td_8 = link_to "delete", product_url(@product), method: :delete,
           confirm: "are you sure you want to delete ' #{@product.product_name} ' ?"
