@@ -2,6 +2,8 @@ TMGPostgresql::Application.routes.draw do
 
   root    'site#index'
 
+  resources :products
+
   # general pages
   get     'privacy' => 'site#privacy'
   get     'terms'   => 'site#terms'
