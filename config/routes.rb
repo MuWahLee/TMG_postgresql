@@ -3,6 +3,7 @@ TMGPostgresql::Application.routes.draw do
   root    'site#index'
 
   resources :products
+  resources :reviews
 
   # general pages
   get     'privacy' => 'site#privacy'
