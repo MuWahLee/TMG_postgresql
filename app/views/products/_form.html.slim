@@ -8,11 +8,23 @@ main.container role="main"
       fieldset
 
         legend Product Details
-        p.own_detail Add in your own gear's details here, then click on Save product.
+        p.own_detail Add in your own items here, then click on Save.
 
-        .form-groups
+        .form-group
           = f.label :product_name, class: "input-group input-group-lg"
           = f.text_field :product_name, class: "form-control" ,placeholder: "Product name"
+
+        .form-group
+          = f.label :brand, class: "input-group input-group-lg"
+          = f.text_field :brand, class: "form-control" ,placeholder: "Brand name"
+
+        .form-group
+          = f.label :category, class: "input-group input-group-lg"
+          = f.text_field :category, class: "form-control" ,placeholder: "Category"
+
+        .form-group
+          = f.label :sub_category, class: "input-group input-group-lg"
+          = f.text_field :sub_category, class: "form-control" ,placeholder: "Sub category"
 
         .form-group
           = f.label :product_weight, class: "input-group input-group-lg"
