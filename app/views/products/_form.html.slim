@@ -1,0 +1,30 @@
+/ main role="form"
+/   div class="form-group"
+main.container role="main"
+  / .row
+  .col-md-5
+
+    = form_for @product, html: { id: "productform", class: "form-horizontal"} do |f|
+      fieldset
+
+        legend Product Details
+        p.own_detail Add in your own gear's details here, then click on Save product.
+
+        .form-groups
+          = f.label :product_name, class: "input-group input-group-lg"
+          = f.text_field :product_name, class: "form-control" ,placeholder: "Product name"
+
+        .form-group
+          = f.label :product_weight, class: "input-group input-group-lg"
+          = f.number_field :product_weight, class: "form-control", placeholder: "Product weight (in grams)."
+
+        .form-group
+          = f.label :product_calories, class: "input-group input-group-lg"
+          = f.number_field :product_calories, class: "form-control" ,placeholder: "Product calories (in calories)."
+
+        / .form-group
+        /   = f.label :product_image, class: "sr-only"
+        /   = f.text_field :product_image, class: "form-control" ,placeholder: "Product image"
+
+        .form-group
+          = f.submit class: "btn btn-success"

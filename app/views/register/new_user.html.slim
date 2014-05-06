@@ -1,0 +1,24 @@
+main.container role="main"
+  .row
+    .col-md-4
+
+
+      = form_for :user, url: register_url, method: :post, html: { id: "registrationform"} do |f|
+        fieldset
+
+          legend Register here
+
+          .form-group
+            = f.label :email, class: "input-group input-group-lg"
+            = f.text_field :email, class: "form-control" ,placeholder: "Email Address"
+
+          .form-group
+            = f.label :password, class: "input-group input-group-lg"
+            = f.password_field :password, class: "form-control", placeholder: "Password"
+
+          .form-group
+            = f.label :password_confirmation, class: "sr-only"
+            = f.password_field :password_confirmation, class: "form-control", placeholder: "Type in your password again"
+
+          .form-group
+            = f.submit "Register", class: "btn btn-info"

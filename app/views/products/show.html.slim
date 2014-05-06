@@ -1,0 +1,21 @@
+
+.container
+  h3.header Display item
+  table class="table table-bordered"
+    thead
+      tr
+        th.th_1 Product name
+        th.th_2 Product Weight (in grams)
+        th.th_3 Product Calories (in calories)
+        th.th_4 Action
+        th.th_4
+
+    tbody
+      / - for item in @products
+      tr
+        td.td_1 => @product.product_name
+        td.td_2 => @product.product_weight
+        td.td_3 => @product.product_calories
+        td.td_4 = link_to "edit", edit_product_url(@product)
+        td.td_4 = link_to "delete", product_url(@product), method: :delete,
+          confirm: "are you sure you want to delete ' #{@product.product_name} ' ?"

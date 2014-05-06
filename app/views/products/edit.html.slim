@@ -1,0 +1,12 @@
+p.links
+  /   => link_to "all products", products_url
+  /   ' |
+  /   => link_to "new product", product_new_url
+  /   ' |
+  => link_to "show product", product_url(@product)
+  ' |
+
+  = link_to "delete", product_url(@product), method: :delete,
+    confirm: "are you sure you want to delete the product ' #{@product.product_name} '?"
+
+== render partial: 'form'
