@@ -8,16 +8,22 @@
     thead
       tr
         th.th_1 Product Name
-        th.th_2 Product Weight (in grams)
-        th.th_3 Product Calories (in calories)
-        th.th_4
+        th.th_2 Brand name
+        th.th_3 Category
+        th.th_4 Sub category
+        th.th_5 Product Weight (in grams)
+        th.th_6 Product Calories (in calories)
+        th.th_7 Product image
     tbody
       - @products.each do |product|
         tr
           td.td_1 = link_to product.product_name, product_url(product)
-          td.td_2 = product.product_weight
-          td.td_3 = product.product_calories
-          td.td_4
+          td.td_2 = product.brand
+          td.td_3 = product.category
+          td.td_4 = product.sub_category
+          td.td_5 = product.product_weight
+          td.td_6 = product.product_calories
+          td.td_7
             / => link_to "more details", product_url(product)
             => link_to "edit", edit_product_url(product)
             =  link_to "delete", product_url(product), method: :delete, confirm: "Are you sure you want to delete the product ' #{product.product_name} '?"
