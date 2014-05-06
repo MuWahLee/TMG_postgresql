@@ -11,18 +11,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140505152125) do
+ActiveRecord::Schema.define(version: 20140506063023) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "items", force: true do |t|
+  create_table "products", force: true do |t|
     t.string   "item_name"
     t.string   "brand"
     t.string   "category"
     t.string   "sub_category"
-    t.integer  "weight"
-    t.integer  "calories"
+    t.integer  "product_weight"
+    t.integer  "product_calories"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -46,6 +46,7 @@ ActiveRecord::Schema.define(version: 20140505152125) do
     t.string   "code"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.datetime "expires_at"
   end
 
 end
