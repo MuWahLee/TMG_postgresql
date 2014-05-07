@@ -4,7 +4,7 @@ PASSWORD_RESET_EXPIRES = 4
 
 class User < ActiveRecord::Base
 
-  has_many  :products
+  has_many  :products, :through => :lists
   has_many  :reviews
 
   attr_accessor :password, :password_confirmation

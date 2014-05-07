@@ -1,0 +1,17 @@
+main.container role="main"
+  / .row
+  .col-md-5
+
+    = form_for @review, html: { id: "reviewform", class: "form-horizontal"} do |f|
+      fieldset
+
+        legend Review Details
+        p.own_detail Give your review of the product here, then click on Save.
+
+
+        .form-group
+          = f.label :review, class: "input-group input-group-lg"
+          = f.number_field :review, class: "form-control" ,placeholder: "Product review."
+
+        .form-group
+          = f.submit class: "btn btn-success"

@@ -24,4 +24,7 @@ TMGPostgresql::Application.routes.draw do
   put     'reset/:code' => 'password#update'
   patch   'reset/:code' => 'password#update'
 
+  get     'gear'  =>  'gear#edit',    as: :gear_form
+  patch   'gear'  =>  'gear#update',  as: :update_gear
+
 end

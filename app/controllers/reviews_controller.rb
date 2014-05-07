@@ -10,7 +10,7 @@ class ReviewsController < ApplicationController
   def create
     @review = Review.new ( review_params )
 
-    if @.save
+    if @review.save
       redirect_to gear_form_url ( @review )
     else
       flash.now[:alert] = @get_review.errors
@@ -53,6 +53,7 @@ class ReviewsController < ApplicationController
 
   def review_params
     params.require(:review).permit(
+      :review,
       :product_id,
       :user_id,
       # :category,
