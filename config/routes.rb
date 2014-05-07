@@ -2,9 +2,10 @@ TMGPostgresql::Application.routes.draw do
 
   root    'site#index'
 
-  resources :products
-  resources :reviews
-  resources :lists
+  # resources :products
+  # resources :lists
+  # resources :reviews
+
 
   # general pages
   get     'privacy' => 'site#privacy'
@@ -27,5 +28,15 @@ TMGPostgresql::Application.routes.draw do
 
   get     'gear'  =>  'gear#edit',    as: :gear_form
   patch   'gear'  =>  'gear#update',  as: :update_gear
+
+  scope :api, except: [ :new, :edit ], defaults: { format: :json } do
+    get '' => "api#index", as: :api
+
+    resources :users
+    resources :products
+    resources :lists
+    resources :reviews
+
+  end
 
 end
