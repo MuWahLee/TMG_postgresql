@@ -13,7 +13,7 @@ class ReviewsController < ApplicationController
     if @review.save
       redirect_to gear_form_url ( @review )
     else
-      flash.now[:alert] = @get_review.errors
+      flash.now[:alert] = @review.errors
       render :new
     end
   end
