@@ -1,0 +1,17 @@
+main.container role="main"
+  / .row
+  .col-md-5
+
+    = form_for @list, html: { id: "listform", class: "form-horizontal"} do |f|
+      fieldset
+
+        legend My List
+        p.own_detail Give your list a name, then click on Save.
+
+
+        .form-group
+          = f.label :list_name, class: "input-group input-group-lg"
+          = f.number_field :list_name, class: "form-control" ,placeholder: "List name."
+
+        .form-group
+          = f.submit class: "btn btn-success"

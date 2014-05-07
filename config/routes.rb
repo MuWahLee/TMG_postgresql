@@ -4,6 +4,7 @@ TMGPostgresql::Application.routes.draw do
 
   resources :products
   resources :reviews
+  resources :lists
 
   # general pages
   get     'privacy' => 'site#privacy'
