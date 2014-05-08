@@ -20,7 +20,7 @@ class ProductsController < ApplicationController
 
 
   def index
-    @products = Product.all.entries
+    @products = Product.all
   end
 
   def show

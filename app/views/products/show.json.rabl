@@ -9,6 +9,10 @@ attributes  :product_weight
 attributes  :product_calories
 
 
-# node :review do |product|
-#   product.review.review
-# end
+node :review do |product|
+  product.reviews
+end
+
+node :list do |product|
+  product.lists.inspect
+end

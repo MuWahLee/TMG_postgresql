@@ -9,9 +9,15 @@ attributes :id,  :product_weight
 attributes :id,  :product_calories
 
 node :href do |product|
-  product_url (product)
+  product_url(product)
 end
 
-# node :review do |product|
-#   product.review.review
-# end
+node :review do |product|
+  product.reviews
+
+end
+
+node :list do |product|
+  product.lists
+
+end
