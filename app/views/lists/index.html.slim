@@ -1,1 +1,63 @@
 <p> lists go here </p>
+
+/ p.links
+/   = link_to "new product", product_new_url
+
+.container
+  h3.header My Lists
+
+  .table-responsive
+    table.table.table-bordered
+      thead
+        tr
+          th.th_1 List Name
+          th.th_2 Product name
+          th.th_3 Category
+          th.th_4 Sub category
+          th.th_5 Product Weight (in grams)
+          th.th_6 Product Calories (in calories)
+          th.th_7 Product image
+      tbody
+        / - @lists.each do |list|
+        /   tr
+        /     td.td_1 = link_to list.product_id, list_url(list)
+            / # td.td_2 = link_to list.product_id.product.product_name
+            / td.td_3 = product.category
+            / td.td_4 = product.sub_category
+            / td.td_5 = product.product_weight
+            / td.td_6 = product.product_calories
+            / td.td_7
+              => link_to "more details", product_url(product)
+        tr
+          td attacama
+          td Cliff energy bar
+          td Food
+          td
+          td 45
+          td 500
+          td img
+        tr
+          td attacama
+          td t-shirt
+          td Clothes
+          td upper
+          td 75
+          td 0
+          td img
+        tr
+          td attacama
+          td shoes
+          td footwear
+          td
+          td 350
+          td 0
+          td img
+      tfoot
+          tr
+          th.th_1 List Name
+          th.th_2 Product name
+          th.th_3 Category
+          th.th_4 Sub category
+          th.th_5 Product Weight (in grams)
+          th.th_6 Product Calories (in calories)
+          th.th_7 Product image

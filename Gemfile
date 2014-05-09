@@ -20,12 +20,27 @@ gem 'fog'
 gem 'mini_magick'
 
 gem 'handlebars'
-gem 'letter_opener'
+
 gem 'oj'
 gem 'rabl'
 gem 'sprockets'
 gem 'nokogiri'
 gem 'rspec'
+
+group :development, :test do
+  # gem "better_errors"
+  gem "binding_of_caller"
+  gem "letter_opener"
+  gem 'rb-fsevent', :require => false
+  gem 'rb-inotify', :require => false
+  gem 'rb-fchange', :require => false
+  gem 'guard-rspec'
+  gem 'guard-livereload'
+
+  gem 'rspec-rails'
+  gem 'factory_girl_rails'
+end
+
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.

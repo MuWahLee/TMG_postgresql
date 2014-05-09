@@ -8,10 +8,30 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <nav class="navbar navbar-default navbar-fixed-top" role="navigation"></nav>
+    <div class="container">
+      <h1>Tally My Gear</h1>
+      <h2 class="header">the place to weigh your gear</h2>
+      <a href="lists">Lists</a>
+      <a href="products">All products</a>
+      <a href="products/new">New product</a>
+      <a href="register">Register</a>
+    </div>
+
 
   <p> hello hello </p>
 
 <%= yield %>
 
 </body>
+<footer>
+  <div id="footer", class="container">
+    <nav class="navbar navbar-default navbar-bottom" role="navigation">
+      <p class="row"></p>
+        <div class="navbar-inner navbar-content-center">
+          <a href="privacy">privacy</a>
+          <a href="terms">terms of use</a>
+        </div>
+    </nav>
+  </div>
 </html>

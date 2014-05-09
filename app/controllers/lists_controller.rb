@@ -10,7 +10,7 @@ class ListsController < ApplicationController
     @list = List.new ( list_params )
 
     if @list.save
-      redirect_to gear_form_url ( @review )
+      redirect_to lists_url ( @list )
     else
       flash.now[:alert] = @list.errors
       render :new

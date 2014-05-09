@@ -2,9 +2,9 @@ TMGPostgresql::Application.routes.draw do
 
   root    'site#index'
 
-  # resources :products
-  # resources :lists
-  # resources :reviews
+  resources :products
+  resources :lists
+  resources :reviews
 
 
   # general pages
